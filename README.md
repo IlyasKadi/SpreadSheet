@@ -16,7 +16,7 @@
 <summary>Table of Contents</summary>
   <ol>
         <li><a href="#SpreadSheet">SpreadSheet (Functionality)</a></li>
-            <ul> 
+           <ul> 
               <li><a href="#Context">Context</a></li>
                   <ul> 
                     <li><a href="#Remarks">Remarks</a></li>           
@@ -36,7 +36,7 @@
                     <li><a href="#Paste">Paste</a></li>
                     <li><a href="#Delete">Delete</a></li>    
                   </ul>
-                 </ul>
+            </ul>
               <li><a href="#Text-Editor">Text Editor</a></li>
                   <ul> 
                     <li><a href="#Creating-the-project">Creating the project</a></li>
@@ -66,12 +66,17 @@ To get a local copy up and running follow these simple example steps.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- Understanding the HSL Color Space -->
-### Understanding-the-HSL-Color-Space
 
-**The HSL color** system uses the `Hue`, `Saturation` and `Luminance` of the color. From the Adobe Techinag Guide page an brief explanation of each attribute is given as follow:
+# SpreadSheet
+## Context
+In the lecture on **QMainWindow**, we wrote the code for the graphical and set of actions for our main SpreadSeet application. Now we will focus on writing a set of basic functionality.
 
-   **Hue** ( denoted `h`) define the color itself, for example red in distinction to blue or yellow. The values of the hue axis run from $[0-360]$ beginning and ending with red and running through green, blue and all intermediary colors like greenish-blue, orange, purple, etc.
+  In the our last iteration of the SpreadSheet we did obtain an application with:
+   * Menu Bar
+   * Two tools bars
+   * Status bar to print the informations
+
+You should have an application that looks like that :
    
    <p align="center">
      <img src="images/hsl_hue.png">
@@ -94,30 +99,48 @@ To get a local copy up and running follow these simple example steps.
      <img src="images/hsl_lightness.png">
    </p>  
   
-   >The saturation field in the HSL space.
-
-   **The full HSL color space** is a three-dimensional space, but it is not a cube. The area truncates toward the two ends of the luminance axis and is widest in the   middle rangel. The ellipsoid reveals several properties of the HSL colro space:
-   
-   <p align="center">
-     <img src="images/hsl.png">
-   </p>
-   
-   >Representation of the HSL color space. 
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- The PNG class -->
-### The-PNG-class
+### Remarks
 
-the [project](https://github.com/IlyasKadi/HSLA-Image-color-space) contain a class called `PNG` that implement basic images maniplation like:
+We did add the following modifications:
 
-   * **Reading** an image from the system.
+   1. The `updateStatusBar` now takes two ints in order to syncrhonize with the selected item from the spreadsheet.
+   ```cpp
+    void updateStatusBar(int, int) 
+   ```
+
+Here is the **implementation** of this function:
+```cpp
+void SpreadSheet::updateStatusBar(int row, int col)
+{
+    QString cell{"(%0, %1)"};
+   cellLocation->setText(cell.arg(row+1).arg(col+1));
+}
+```
+Which simply change the **cellLocation** text with the current cell coordinates.
+
+   1. We added the `makeConnexion()` function to connect all the actions. Here is the content of the this function:
     
-   * **Writing** an image into the system.
-    
-   * **Accessing** pixels of this image.
+  ```cpp
+    void SpreadSheet::makeConnexions()
+    {
 
-Here is a glance for this class header:
+    // --------- Connexion for the  select all action ----/
+    connect(all, &QAction::triggered,
+            spreadsheet, &QTableWidget::selectAll);
+
+    // Connection for the  show grid
+    connect(showGrid, &QAction::triggered,
+            spreadsheet, &QTableWidget::setShowGrid);
+
+    //Connection for the exit button
+    connect(exit, &QAction::triggered, this, &SpreadSheet::close);
+
+    //connectting the chane of any element in the spreadsheet with the update status bar
+    connect(spreadsheet, &QTableWidget::cellClicked, this,  &SpreadSheet::updateStatusBar);
+    }
+  ```
 
 ```cpp
 class PNG{
