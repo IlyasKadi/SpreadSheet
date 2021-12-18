@@ -81,23 +81,6 @@ You should have an application that looks like that :
    <p align="center">
      <img src="images/hsl_hue.png">
    </p>  
-   
-   >The Hue representation of basic colors. 
-        
-   **Saturation** (denoted as `s`) indicates the degree to which the hue differs from a neutral gray. The values run from $0\%$, which is no color saturation, to $100\%$, which is the fullest saturation of a given hue at a given percentage of illumination.
-   
-   <p align="center">
-     <img src="images/hsl_saturation.png">
-   </p>  
-   
-   >The saturation field in the HSL space.
-   
-   **Luminance** (denoted as `l`) indicates the level of illumination.
-   The value values run as pecentenage $0\%$ appears black (no light) while $100/%$ is full illumination.
-   
-   <p align="center">
-     <img src="images/hsl_lightness.png">
-   </p>  
   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -143,17 +126,85 @@ Which simply change the **cellLocation** text with the current cell coordinates.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+## Go-Cell
 
-<!-- Inhertance diagram -->
-## Inhertance-diagram
+Now we will add the function for the **goCell** action. For that, we need to create a **Dialog** for the user to select a cell.
 
-Your goal is to write additional classes that inherit from this class and implement addtional functionalities.
+here are the steps to acomplish that:
+
+   1. Create a Form Class:
+
+   2. Using the designer obtain the following the form:
 
 <p align="center">
   <img src="images/image_class_diagram.png">
 </p>
 
- >UML class diagram for the additional Images classes.
+ >Ui components of the Go Dialog. 
+
+
+
+   3. Add the regular expression validator for the lineEdit:
+ ```cpp
+ //Validating the regular expression
+ QRegExp regCell{"[A-Z][1-9][0-9]{0,2}"};
+
+ //Validating the regular expression
+ ui->lineEdit->setValidator(new QRegExpValidator(regCell));
+```
+   4. Add a public Getter for the line edit Text to get the cell address:
+ ```cpp
+    QString GoCellDialog::cell() const
+    {
+        return ui->lineEdit->text();
+    }
+ ```
+
+No we are setup to create the interesting connexion between the goCell action:
+
+  1. First we will create the proper slot called goCellSlot to respond to the action trigger.
+```cpp
+   private slots:
+   void goCellSlot();            // Go to a Cell slot
+```
+
+  2. connect the action to its proper slot in the makeConnexions function:
+```cpp
+   //Connextion between the gocell action and the gocell slot
+   connect(goCell, &QAction::triggered, this, &SpreadSheet::goCellSlot);
+```
+
+  3. Now for the fun part. We will implement the goCellSlot() function:
+   
+```cpp
+   void SpreadSheet::goCellSlot()
+     {
+        //Creating the dialog
+        GoCellDialog D;
+
+        //Executing the dialog and storing the user response
+        auto reply = D.exec();
+
+       //Checking if the dialog is accepted
+       if(reply == GoCellDialog::Accepted)
+       {
+             //Getting the cell text
+             auto cell = D.cell();
+
+             //letter distance
+             int row = cell[0].toLatin1() - 'A';
+             cell.remove(0,1);
+
+             //second coordinate
+             int col =  cell.toInt();
+
+
+             //changing the current cell
+             spreadsheet->setCurrentCell(row, col-1);
+         }
+     }
+```
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
