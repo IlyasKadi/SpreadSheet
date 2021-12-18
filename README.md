@@ -15,25 +15,36 @@
 <!-- TABLE OF CONTENTS -->
 <summary>Table of Contents</summary>
   <ol>
-        <li><a href="#getting-started">getting-started</a></li>
-        <li><a href="#Understanding-the-HSL-Color-Space">UsaUnderstanding the HSL Color Spacege</a></li>
-        <li><a href="#The-PNG-class">The PNG class</a></li>
-      </ul>
-    </li>
-    <li><a href="#Inhertance-diagram">Inhertance diagram</a></li>
-      <ul>
-        <li><a href="#Image">Image</a></li>
+        <li><a href="#SpreadSheet">SpreadSheet (Functionality)</a></li>
             <ul> 
-              <li><a href="#lighten">lighten</a></li>
-              <li><a href="#saturate">saturate</a></li>
-              <li><a href="#rotateColor">rotateColor</a></li>
-            </ul>
-        <li><a href="#Grayscale">Grayscale</a></li>
-        <li><a href="#Illini">Illini</a></li>
-        <li><a href="#Spotlight">Spotlight</a></li>
+              <li><a href="#Context">Context</a></li>
+                  <ul> 
+                    <li><a href="#Remarks">Remarks</a></li>           
+                  </ul>
+              <li><a href="#Go-Cell">Go Cell</a></li>
+              <li><a href="#Find-Dialog">Find Dialog</a></li>
+              <li><a href="#Saving-and-loading-files">Saving and loading files</a></li>
+                  <ul> 
+                    <li><a href="#Saving-Content">Saving Content</a></li>
+                    <li><a href="#Save-File-action">Save File action</a></li>
+                    <li><a href="#Load-File">Load File</a></li>
+                  </ul>
+              <li><a href="#other-actions">Other Actions</a></li>
+                  <ul> 
+                    <li><a href="#Creating-the-project">Creating the project</a></li>
+                    <li><a href="#Icons">Icons</a></li>
+                    <li><a href="#Menus">Menus</a></li>
+                    <li><a href="#Actions">Actions</a></li>    
+                  </ul>
+              <li><a href="#Text-Editor">Text Editor</a></li>
+                  <ul> 
+                    <li><a href="#Creating-the-project">Creating the project</a></li>
+                    <li><a href="#Icons">Icons</a></li>
+                    <li><a href="#Menus">Menus</a></li>
+                    <li><a href="#Actions">Actions</a></li>
+                    <li><a href="#Functionality">Functionality</a></li>  
+                 </ul>  
     </ol>
- 
-</details>
 
 
 
