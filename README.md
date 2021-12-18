@@ -60,7 +60,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. [**How to install Qt**](https://anassbelcaid.github.io/CS221/qtcreator/)
 2. **Clone the repo**
-   ```url
+   ```sh
    git clone https://github.com/IlyasKadi/SpreadSheet.git
    ```
 
