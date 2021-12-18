@@ -31,11 +31,12 @@
                   </ul>
               <li><a href="#other-actions">Other Actions</a></li>
                   <ul> 
-                    <li><a href="#Creating-the-project">Creating the project</a></li>
-                    <li><a href="#Icons">Icons</a></li>
-                    <li><a href="#Menus">Menus</a></li>
-                    <li><a href="#Actions">Actions</a></li>    
+                    <li><a href="#Copy">Copy</a></li>
+                    <li><a href="#Cut">Cut</a></li>
+                    <li><a href="#Paste">Paste</a></li>
+                    <li><a href="#Delete">Delete</a></li>    
                   </ul>
+                 </ul>
               <li><a href="#Text-Editor">Text Editor</a></li>
                   <ul> 
                     <li><a href="#Creating-the-project">Creating the project</a></li>
