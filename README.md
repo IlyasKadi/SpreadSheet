@@ -148,7 +148,6 @@ here are the steps to acomplish that:
  ```cpp
  //Validating the regular expression
  QRegExp regCell{"[A-Z][1-9][0-9]{0,2}"};
-
  //Validating the regular expression
  ui->lineEdit->setValidator(new QRegExpValidator(regCell));
 ```
@@ -181,40 +180,48 @@ No we are setup to create the interesting connexion between the goCell action:
      {
         //Creating the dialog
         GoCellDialog D;
-
         //Executing the dialog and storing the user response
         auto reply = D.exec();
-
        //Checking if the dialog is accepted
        if(reply == GoCellDialog::Accepted)
        {
              //Getting the cell text
              auto cell = D.cell();
-
              //letter distance
              int row = cell[0].toLatin1() - 'A';
              cell.remove(0,1);
-
              //second coordinate
              int col =  cell.toInt();
-
-
              //changing the current cell
              spreadsheet->setCurrentCell(row, col-1);
          }
      }
 ```
+<p align="center">
+  <img src="images/image_class_diagram.png">
+</p>
 
+<p align="center">
+  <img src="images/image_class_diagram.png">
+</p>
+
+> Go to Cell dialog and response. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- Image -->
-## Image
-Create a class named `Image` that inherits from the `PNG` class. This means that your class will inherits all the attributes and members from the `PNG` class. Meaning that anything you can do with a `PNG` you can do with an `Image`.
+## Find Dialog
+We will move now for the **Find** dialog. This dialog prompts the user for a input and seek a cell that contains the entered text.
   
+  1. Create a Form Class with the following ui:
+  
+<p align="center">
+  <img src="images/image_class_diagram.png">
+</p>
 
+> Find Dialog ui form.  
+    
 .Header
 ```cpp
 class Image : public PNG
