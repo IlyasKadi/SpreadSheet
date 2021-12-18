@@ -61,7 +61,7 @@ To get a local copy up and running follow these simple example steps.
 1. [**How to install Qt**](https://anassbelcaid.github.io/CS221/qtcreator/)
 2. **Clone the repo**
    ```sh
-   git clone https://github.com/IlyasKadi/HSLA_Image_color_space.git
+   git clone https://github.com/IlyasKadi/SpreadSheet.git
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -367,12 +367,52 @@ void SpreadSheet::saveSlot()
 
 
 # Text-Editor
+For your first example, we will playing the Designer for a fast application creation. The application is from Qt Examples and is a simple text editor program built around QPlainText.
+
+<p align="center">
+  <img src="images/image_class_diagram.png">
+</p>
+
+> Example for the main text editor. 
+
+We will mainly use the designer for a rapid design of it features. But if you feel adventurous you can write all in using code.
+
+Here is an overview of the menus:
+
+| File                                    | Edit                                | Help                            |
+| :---                                    |             :----:                  |                            ---: |
+| ![alt text](image url "FILE")           | ![alt text](image url "EDIT")       | ![alt text](image url "HELP")   |
+
+> Set of menus for our application. 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Spotlight
+## Creating-the-project
 
+First create a new project called `WordText` using the following steps:
+
+   1. Choose a `QT Widgets Application`.
+   2. Name your project `WordText`
+   3. Inherit now from **QMainWindow**.
+   4. Choose all the remaining default choices.
+
+## Creating-the-project
+
+1. Add a resource file and add a set of predefined icons from you choice.
+
+
+## Menus
+
+Using the designer add all the menues in the image description.
+
+## Actions
+
+Easy enough you can also add your actions to a menu by simply clicking the text in the menu.
+
+## Functionality
+
+Now using your knowledge, try to code the functionality of the **Text Editor**. Here is a link for QPlainTextEdit.
 
 
 
@@ -380,8 +420,6 @@ void SpreadSheet::saveSlot()
 
 Out Team - [AIT EL KADI Ilyas](https://github.com/IlyasKadi) - [AZIZ Oussama](https://github.com/ATAMAN0)
 
-Project Link: [https://github.com/IlyasKadi/HSLA_Image_color_space](https://github.com/IlyasKadi/HSLA_Image_color_space)
+Project Link: [https://github.com/IlyasKadi/SpreadSheet](https://github.com/IlyasKadi/SpreadSheet)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-> Excellent Work!! One of the best reports I've read so far!
