@@ -106,52 +106,39 @@ You should have an application that looks like that :
 We did add the following modifications:
 
    1. The `updateStatusBar` now takes two ints in order to syncrhonize with the selected item from the spreadsheet.
-   ```cpp
-    void updateStatusBar(int, int) 
-   ```
+  
+ ```cpp
+  void updateStatusBar(int, int) 
+ ```
 
 Here is the **implementation** of this function:
+
 ```cpp
-void SpreadSheet::updateStatusBar(int row, int col)
-{
-    QString cell{"(%0, %1)"};
-   cellLocation->setText(cell.arg(row+1).arg(col+1));
-}
+   void SpreadSheet::updateStatusBar(int row, int col)
+    {
+     QString cell{"(%0, %1)"};
+     cellLocation->setText(cell.arg(row+1).arg(col+1));
+    }
 ```
 Which simply change the **cellLocation** text with the current cell coordinates.
 
    1. We added the `makeConnexion()` function to connect all the actions. Here is the content of the this function:
     
-  ```cpp
-    void SpreadSheet::makeConnexions()
-    {
-
-    // --------- Connexion for the  select all action ----/
-    connect(all, &QAction::triggered,
-            spreadsheet, &QTableWidget::selectAll);
-
-    // Connection for the  show grid
-    connect(showGrid, &QAction::triggered,
-            spreadsheet, &QTableWidget::setShowGrid);
-
-    //Connection for the exit button
-    connect(exit, &QAction::triggered, this, &SpreadSheet::close);
-
-    //connectting the chane of any element in the spreadsheet with the update status bar
-    connect(spreadsheet, &QTableWidget::cellClicked, this,  &SpreadSheet::updateStatusBar);
-    }
-  ```
-
 ```cpp
-class PNG{
-    PNG();   //default constructor
-    PNG(int, int): //constructor with width and height
-    ~PNG();         //Destructor
-    bool readFromFile(string);  //read from a file
-    bool writeToFile(string);  //write content to a file
-    HSLAPixel  getPixel(int x, int y); //get content for pixel x, y
-};
-```
+  void SpreadSheet::makeConnexions()
+  {
+  // --------- Connexion for the  select all action ----/
+  connect(all, &QAction::triggered,
+          spreadsheet, &QTableWidget::selectAll);
+  // Connection for the  show grid
+  connect(showGrid, &QAction::triggered,
+          spreadsheet, &QTableWidget::setShowGrid);
+  //Connection for the exit button
+  connect(exit, &QAction::triggered, this, &SpreadSheet::close);
+  //connectting the chane of any element in the spreadsheet with the update status bar
+  connect(spreadsheet, &QTableWidget::cellClicked, this,  &SpreadSheet::updateStatusBar);
+  }
+ ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
