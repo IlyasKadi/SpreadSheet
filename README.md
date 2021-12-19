@@ -379,9 +379,9 @@ We will mainly use the designer for a rapid design of it features. But if you fe
 
 Here is an overview of the menus:
 
-| File                                    | Edit                                | Help                            |
-| :---                                    |             :----:                  |                            ---: |
-| ![alt text](image url "FILE")           | ![alt text](image url "EDIT")       | ![alt text](image url "HELP")   |
+| File                                    | Edit                                | Help                                  |
+| :---                                    |             :----:                  |                                  ---: |
+| ![Image haikyuu](images/haikyuu.png)    |![Image haikyuu](images/haikyuu.png) |![Image haikyuu](images/haikyuu.png)   |
 
 > Set of menus for our application. 
 
