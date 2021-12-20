@@ -104,15 +104,6 @@ You should have an application that looks like that :
      <img src="images/interface_sp.png">
    </p>  
   
-| File                                    | Edit                                | Help                                  |
-| :---                                    |             :----:                  |                                  ---: |
-| ![Image ](images/file_sp.png)             |![Image ](images/edit_sp.png)          |![Image ](images/tool_sp.png)            |
-
-
-| File       | Edit     | 
-|  --------  | ----     | 
-| ![Image ](images/options_sp.png)  |![Image ](images/help_sp.png) |
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Remarks
@@ -679,7 +670,7 @@ void SpreadSheet::aboutqtslot()
  ```
  
  <p align="center">
-  <img src="About_qt.png">
+  <img src="images/About_qt.png">
 </p>
 
   ### About-spreadsheet
@@ -690,6 +681,7 @@ void SpreadSheet::aboutslot()
     QMessageBox::about(this,"About spreadsheet",abouttext);
 }
  ```
+ 
  <p align="center">
   <img src="images/about_sp.png">
 </p>
