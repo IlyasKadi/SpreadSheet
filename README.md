@@ -273,7 +273,7 @@ No we are setup to create the interesting connexion between the goCell action:
          }
      }
 ```
-| File       | Edit     | 
+| Cell location     | Cell avtivated     | 
 |  --------  | ----     | 
 | ![Image ](images/go-cell.png)  |![Image ](images/go-cell1.png) |
 
@@ -309,7 +309,7 @@ Here is a set of useful information about the `QTableWidget` class:
    spreadsheet->setCurrentCell(int i, int j);
 ```
 
-| File       | Edit     | 
+| String to find     | String found     | 
 |  --------  | ----     | 
 | ![Image ](images/khadouj.png)  |![Image ](images/khadouj1.png) |
 
@@ -608,7 +608,7 @@ void SpreadSheet::saveContent(QString filename)
 |  --------  | ----     | 
 | ![Image ](images/recentfiles_swap2.png)  |![Image ](images/recentfiles_swap.png) |
 
-> last file always shows in the top of the 5 recent files (no redundancy, and only max of 5 files)
+> The last file is always shown in the top of the 5 recent files (no redundancy, and only max of 5 files)
 
 
    ### Open-recent-files
