@@ -399,7 +399,7 @@ void SpreadSheet::saveSlot()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Other-Actions
+## Other-Actions's slots
 ### Copy
 
 ```cpp
@@ -453,6 +453,165 @@ void SpreadSheet::deleteslot()
     cell->setText("");
 }
  ```
+ ### select rows
+```cpp
+void SpreadSheet::selectrowslot()
+{
+  int row = spreadsheet->currentRow();
+    for(int i=0;i<spreadsheet->columnCount();i++)
+    {
+        auto  cell = spreadsheet->item(row,i);
+        cell =new QTableWidgetItem;
+        spreadsheet->setItem(row,i,cell);
+        cell->setSelected(true);
+    }
+}
+ ```
+  ### select columns
+```cpp
+void SpreadSheet::selectrcolslot()
+{
+  int col = spreadsheet->currentColumn();
+    for(int i=0;i<spreadsheet->rowCount();i++)
+    {
+        auto  cell = spreadsheet->item(i,col);
+        cell =new QTableWidgetItem;
+        spreadsheet->setItem(i,col,cell);
+        cell->setSelected(true);
+    }
+}
+ ```
+  ### show last 5 recent files (after saving)
+  ```cpp
+void SpreadSheet::saveContent(QString filename)
+{
+    QFile file(filename);
+
+    if(file.open(QIODevice::WriteOnly))
+    {
+        QTextStream out(&file);
+        for(int i=0;i<spreadsheet->rowCount();i++)
+        {
+            for(int j=0;j<spreadsheet->columnCount();j++)
+            {
+                auto cell = spreadsheet->item(i,j);
+                if(cell)
+                {
+                    out  << cell->text() << ",";
+                }
+
+            }
+             out<< Qt::endl;
+        }
+    }
+
+    if(files.length()==5)
+    {
+        files.pop_back();
+        files.push_front(new QAction(filename));
+        recentfile->clear();
+        recentfile->addActions(files);
+        for(int i=0; i <files.size(); i++)
+            connect(files[i],&QAction::triggered,this,&SpreadSheet::openrecentfilesslot);
+    }
+
+     if(files.length()>=0&&files.length()<5)
+    {
+         int c=0;
+        for(int i=0;i<files.length();i++)
+        {
+            if(filename==files[i]->text())
+            {
+                c++;
+            }
+
+
+        }
+        if(c==0)
+        {
+            files.push_front(new QAction(filename));
+
+        }
+
+     }
+     recentfile->clear();
+     recentfile->addActions(files);
+     for(int i=0; i <files.size(); i++)
+         connect(files[i],&QAction::triggered,this,&SpreadSheet::openrecentfilesslot);
+
+
+
+    file.close();
+
+}
+ ```
+   ### open recent files
+ ```cpp
+ void SpreadSheet::openrecentfilesslot()
+{
+    auto action = dynamic_cast<QAction*>(sender());
+    if(action)
+    {
+        QString path = action->text();
+        currentFile=new QString(path);
+        loadContent(path);
+         setWindowTitle(path);
+    }
+}
+ ```
+   ### open/save csv files
+ ```cpp
+void SpreadSheet::loadContent(QString filename)
+{
+
+    QFile file(filename);
+
+    if(file.open(QIODevice::ReadOnly))
+    {
+        QTextStream in(&file);
+        int row=0;
+        while(!in.atEnd())
+        {
+            int col=0;
+            QString line;
+            line=in.readLine();
+             auto tokens=line.split(QChar(','));
+             for(QString s:tokens)
+             {
+                 auto cell = new QTableWidgetItem(s);
+                 spreadsheet->setItem(row,col,cell);
+                 col++;
+             }
+             row++;
+        }
+    }
+}
+
+void SpreadSheet::saveContent(QString filename)
+{
+    QFile file(filename);
+
+    if(file.open(QIODevice::WriteOnly))
+    {
+        QTextStream out(&file);
+        for(int i=0;i<spreadsheet->rowCount();i++)
+        {
+            for(int j=0;j<spreadsheet->columnCount();j++)
+            {
+                auto cell = spreadsheet->item(i,j);
+                if(cell)
+                {
+                    out  << cell->text() << ",";
+                }
+
+            }
+             out<< Qt::endl;
+        }
+    }
+ }
+
+ ```
+ 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
