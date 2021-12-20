@@ -668,6 +668,7 @@ void SpreadSheet::aboutqtslot()
     QMessageBox::aboutQt(this,"about_QT");
 }
  ```
+ 
  <p align="center">
   <img src="sp_aboutqt.png">
 </p>
