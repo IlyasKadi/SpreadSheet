@@ -603,6 +603,12 @@ void SpreadSheet::saveContent(QString filename)
 
 }
  ```
+ 
+ | File       | Edit     | 
+|  --------  | ----     | 
+| ![Image ](images/recentfiles_swap.png)  |![Image ](images/recentfiles_swap2.png) |
+
+
    ### Open-recent-files
  ```cpp
  void SpreadSheet::openrecentfilesslot()
