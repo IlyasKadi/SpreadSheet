@@ -104,6 +104,15 @@ You should have an application that looks like that :
      <img src="images/interface_sp.png">
    </p>  
   
+| File                                    | Edit                                | tools                                  |
+| :---                                    |             :----:                  |                                  ---: |
+| ![Image ](images/file_sp.png)             |![Image ](images/edit_sp.png)          |![Image ](images/tools_sp.png)            |
+
+
+| options       | help     | 
+|  --------     | ----     | 
+| ![Image ](images/options_sp.png)  |![Image ](images/help_sp.png) |
+  
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Remarks
