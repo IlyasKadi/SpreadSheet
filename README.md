@@ -415,7 +415,7 @@ void SpreadSheet::saveSlot()
 For your first example, we will playing the Designer for a fast application creation. The application is from Qt Examples and is a simple text editor program built around QPlainText.
 
 <p align="center">
-  <img src="images/image_class_diagram.png">
+  <img src="images/Inerface_TE.png">
 </p>
 
 > Example for the main text editor. 
