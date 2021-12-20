@@ -39,10 +39,11 @@
             </ul>
               <li><a href="#Text-Editor">Text Editor</a></li>
                   <ul> 
-                    <li><a href="#Creating-the-project">Creating the project</a></li>
-                    <li><a href="#Icons">Icons</a></li>
+                    <li><a href="#Creating-the-project">Creating the project</a></li> 
                     <li><a href="#Menus">Menus</a></li>
-                    <li><a href="#Actions">Actions</a></li>
+                      <ul>
+                         <li><a href="#Actions">Actions</a></li>
+                      </ul>   
                     <li><a href="#Functionality">Functionality</a></li>  
                  </ul>  
     </ol>
@@ -724,7 +725,7 @@ First create a new project called `WordText` using the following steps:
 
 Using the designer add all the menues in the image description.
 
-## Actions
+### Actions
 
 Easy enough you can also add your actions to a menu by simply clicking the text in the menu.
 
