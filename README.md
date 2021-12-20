@@ -108,19 +108,64 @@ Which simply change the **cellLocation** text with the current cell coordinates.
    1. We added the `makeConnexion()` function to connect all the actions. Here is the content of the this function:
     
 ```cpp
-  void SpreadSheet::makeConnexions()
-  {
-  // --------- Connexion for the  select all action ----/
-  connect(all, &QAction::triggered,
-          spreadsheet, &QTableWidget::selectAll);
-  // Connection for the  show grid
-  connect(showGrid, &QAction::triggered,
-          spreadsheet, &QTableWidget::setShowGrid);
-  //Connection for the exit button
-  connect(exit, &QAction::triggered, this, &SpreadSheet::close);
-  //connectting the chane of any element in the spreadsheet with the update status bar
-  connect(spreadsheet, &QTableWidget::cellClicked, this,  &SpreadSheet::updateStatusBar);
-  }
+ void SpreadSheet::makeConnexions()
+{
+    // --------- Connexion for the  select all action ----/
+    connect(all, &QAction::triggered,
+            spreadsheet, &QTableWidget::selectAll);
+
+    // Connection for the  show grid
+    connect(showGrid, &QAction::triggered,
+            spreadsheet, &QTableWidget::setShowGrid);
+
+    //Connection for the exit button
+    connect(exit, &QAction::triggered, this, &SpreadSheet::close);
+
+    //connectting the chane of any element in the spreadsheet with the update status bar
+    connect(spreadsheet, &QTableWidget::cellClicked, this,  &SpreadSheet::updateStatusBar);
+
+    //connnetthe  gocell action
+    connect(goCell, &QAction::triggered, this, &SpreadSheet::goCellSlot);
+
+    //connnet the find action
+    connect(find, &QAction::triggered, this, &SpreadSheet::findSlot);
+
+    //connnet the savefile action
+    connect(save,&QAction::triggered,this,&SpreadSheet::saveSlot);
+
+    //connnet the saveAsfile action
+    connect(saveAs,&QAction::triggered,this,&SpreadSheet::saveasslot);
+
+    //connnet the newfile action
+    connect(newFile,&QAction::triggered,this,&SpreadSheet::newfileslot);
+
+    //connect the openfile action
+    connect(open,&QAction::triggered,this,&SpreadSheet::loadslot);
+
+    //connect the copy action
+    connect(copy,&QAction::triggered,this,&SpreadSheet::copyslot);
+
+    //connect the cut action
+    connect(cut,&QAction::triggered,this,&SpreadSheet::cutslot);
+
+    //connect the paste action
+    connect(paste,&QAction::triggered,this,&SpreadSheet::pasteslot);
+
+    //connect the delete action
+    connect(deleteAction,&QAction::triggered,this,&SpreadSheet::deleteslot);
+
+    //connect the select row
+    connect(row,&QAction::triggered,this,&SpreadSheet::selectrowslot);
+
+    //connect the select col
+    connect(Column,&QAction::triggered,this,&SpreadSheet::selectrcolslot);
+
+    //connect the about-Qt
+    connect(aboutQt,&QAction::triggered,this,&SpreadSheet::aboutqtslot);
+
+    //connect the about
+    connect(about,&QAction::triggered,this,&SpreadSheet::aboutslot);
+}
  ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
