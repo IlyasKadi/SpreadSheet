@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>copy.png</file>
+        <file>cutting.png</file>
+        <file>diskette.png</file>
+        <file>folder.png</file>
+        <file>logout.png</file>
+        <file>paste.png</file>
+        <file>7l3k8bqfjm1d72bnk5dq31nu1a-a16869f12c9b6f9e5550a461602c3dbf.png</file>
+        <file>new-document.png</file>
+        <file>text-editor-icon-4.jpg</file>
+    </qresource>
+</RCC>
