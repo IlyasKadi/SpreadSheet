@@ -43,6 +43,11 @@
                     <li><a href="#Menus">Menus</a></li>
                       <ul>
                          <li><a href="#Actions">Actions</a></li>
+                            <ul>
+                               <li><a href="#File-Actions">File Actions</a></li>
+                               <li><a href="#Edit-Actions">Edit Actions</a></li>
+                               <li><a href="#Help-Actions">Help Actions</a></li>
+                           </ul>
                       </ul>    
                  </ul>  
     </ol>
@@ -718,11 +723,15 @@ Here is an overview of the menus:
 
 > Set of menus for our application. 
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Actions
 
-Easy enough you can also add your actions to a menu by simply clicking the text in the menu.
+# File-Actions
 
+# Edit-Actions
+
+# Help-Actions
 
 
 
