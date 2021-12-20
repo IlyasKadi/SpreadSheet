@@ -862,18 +862,7 @@ void TextEditor::on_actionSave_As_triggered()
 
 }
  ```
-   ##### Exit
-```cpp
-
-void SpreadSheet::cutslot()
-{
-     auto cell = spreadsheet->item(spreadsheet->currentRow(),spreadsheet->currentColumn());
-     QString cellc =cell->text();
-     clipboard->setText(cellc);
-     cell->setText("");
-
-}
- ```
+> The exit action is created within the designer form
 
 #### Edit-Actions
 > For the copy,cut and paste actions are created with the designer form
@@ -890,6 +879,8 @@ void TextEditor::textSelected(bool isselected)
 | before selecting text                   | After selecting a text              | After selecting a text                              |
 | :---                                    |             :----:                  |                                  ---: |
 | ![Image haikyuu](images/Edit_.png)    |![Image haikyuu](images/selectedttext2_.png)     |![Image haikyuu](images/selectedtext_.png)     |
+
+> Once you select a test copy,cut are enabled
 
 #### Help-Actions
    ##### About_T-E
