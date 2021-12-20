@@ -401,8 +401,48 @@ void SpreadSheet::saveSlot()
 
 ## Other-Actions
 ### Copy
+
+```cpp
+
+void SpreadSheet::copyslot()
+{
+    auto cell = spreadsheet->item(spreadsheet->currentRow(),spreadsheet>currentColumn());
+    QString cellc =cell->text();
+    clipboard->setText(cellc);
+
+}
+ ```
 ### Cut
+```cpp
+
+void SpreadSheet::cutslot()
+{
+     auto cell = spreadsheet->item(spreadsheet->currentRow(),spreadsheet->currentColumn());
+     QString cellc =cell->text();
+     clipboard->setText(cellc);
+     cell->setText("");
+
+}
+ ```
 ### Paste
+```cpp
+
+void SpreadSheet::pasteslot()
+{
+   QString text = clipboard->text();
+   auto  cell = spreadsheet->item(spreadsheet->currentRow(),spreadsheet->currentColumn());
+
+     if(!cell)
+     {
+         cell = new QTableWidgetItem((text));
+         spreadsheet->setItem(spreadsheet->currentRow(),spreadsheet->currentColumn(),cell);
+     }
+
+
+    cell->setText(text);
+}
+ ```
+
 ### Delete
 <p align="right">(<a href="#top">back to top</a>)</p>
 
