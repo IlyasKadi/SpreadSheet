@@ -37,9 +37,9 @@
                     <li><a href="#Delete">Delete</a></li> 
                     <li><a href="#Select-rows">Select rows</a></li>
                     <li><a href="#Select-columns">Select columns</a></li>
-                    <li><a href="#Show-last-5-recent-files-(after_saving)">Show last 5 recent files (after saving)</a></li>
+                    <li><a href="#Show-last-5-recent-files">Show last 5 recent files (after saving)</a></li>
                     <li><a href="#Open-recent-files">Open recent files</a></li>
-                    <li><a href="#Open-&-save-csv-files">Open & save csv files</a></li>
+                    <li><a href="#Open-and-save-csv-files">Open & save csv files</a></li>
                     <li><a href="#About-Qt">About Qt</a></li>
                     <li><a href="#About-spreadsheet">About spreadsheet</a></li>
                     <li><a href="#Save-As">Save As</a></li>
@@ -530,7 +530,7 @@ void SpreadSheet::selectrcolslot()
     }
 }
  ```
-  ### Show-last-5-recent-files-(after_saving)
+  ### Show-last-5-recent-files
   ```cpp
 void SpreadSheet::saveContent(QString filename)
 {
@@ -608,7 +608,7 @@ void SpreadSheet::saveContent(QString filename)
     }
 }
  ```
-   ### Open-&-save-csv-files
+   ### Open-and-save-csv-files
  ```cpp
 void SpreadSheet::loadContent(QString filename)
 {
