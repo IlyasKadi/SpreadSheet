@@ -61,16 +61,6 @@
                  </ul>  
     </ol>
 
-#Select-rows
-#Select-columns
-#Show-last-5-recent-files-(after_saving)
-#Open-recent-files
-#Open-&-save-csv-files
-#About-Qt
-#About-spreadsheet
-#Save-As
-#New-file
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
