@@ -905,3 +905,6 @@ Project Link: [https://github.com/IlyasKadi/SpreadSheet](https://github.com/Ilya
 Encadré par : [Mr.Belcaid.anass](https://anassbelcaid.github.io)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+> Amazing work and Dedication. Completely worth the delay :)
