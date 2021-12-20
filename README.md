@@ -43,8 +43,7 @@
                     <li><a href="#Menus">Menus</a></li>
                       <ul>
                          <li><a href="#Actions">Actions</a></li>
-                      </ul>   
-                    <li><a href="#Functionality">Functionality</a></li>  
+                      </ul>    
                  </ul>  
     </ol>
 
@@ -694,6 +693,21 @@ For your first example, we will playing the Designer for a fast application crea
 
 > Example for the main text editor. 
 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Creating-the-project
+
+First create a new project called `TextEditor` using the following steps:
+
+   1. Choose a `QT Widgets Application`.
+   2. Name your project `TEXT_editor`
+   3. Inherit now from **QMainWindow**.
+   4. Choose all the remaining default choices.
+
+
+## Menus
+
 We will mainly use the designer for a rapid design of it features. But if you feel adventurous you can write all in using code.
 
 Here is an overview of the menus:
@@ -705,33 +719,11 @@ Here is an overview of the menus:
 > Set of menus for our application. 
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Creating-the-project
-
-First create a new project called `WordText` using the following steps:
-
-   1. Choose a `QT Widgets Application`.
-   2. Name your project `WordText`
-   3. Inherit now from **QMainWindow**.
-   4. Choose all the remaining default choices.
-
-## Creating-the-project
-
-1. Add a resource file and add a set of predefined icons from you choice.
-
-
-## Menus
-
-Using the designer add all the menues in the image description.
-
 ### Actions
 
 Easy enough you can also add your actions to a menu by simply clicking the text in the menu.
 
-## Functionality
 
-Now using your knowledge, try to code the functionality of the **Text Editor**. Here is a link for QPlainTextEdit.
 
 
 
