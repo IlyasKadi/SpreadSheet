@@ -242,13 +242,7 @@ No we are setup to create the interesting connexion between the goCell action:
          }
      }
 ```
-<p align="center">
-  <img src="images/image_class_diagram.png">
-</p>
 
-<p align="center">
-  <img src="images/image_class_diagram.png">
-</p>
 
 > Go to Cell dialog and response. 
 
@@ -350,6 +344,10 @@ void SpreadSheet::saveContent(QString filename) const
      file.close();
  }
 ```
+
+| File                                    | Edit                                | 
+| :--- :                                  |             :----:                  | 
+| ![Image haikyuu](images/go-cell.png)      |![Image haikyuu](images/go-cell1.png)   |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
