@@ -668,6 +668,9 @@ void SpreadSheet::aboutqtslot()
     QMessageBox::aboutQt(this,"about_QT");
 }
  ```
+ <p align="center">
+  <img src="sp_aboutqt.png.png">
+</p>
   ### About-spreadsheet
 
 ```cpp
@@ -676,6 +679,9 @@ void SpreadSheet::aboutslot()
     QMessageBox::about(this,"About spreadsheet",abouttext);
 }
  ```
+ <p align="center">
+  <img src="images/about_sp.png.png">
+</p>
    ### Save-As
 
 ```cpp
@@ -700,6 +706,9 @@ void SpreadSheet::newfileslot()
     newfile->show();
 }
  ```
+ <p align="center">
+  <img src="images/newfile.png.png">
+</p>
  
  
  
