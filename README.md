@@ -34,7 +34,16 @@
                     <li><a href="#Copy">Copy</a></li>
                     <li><a href="#Cut">Cut</a></li>
                     <li><a href="#Paste">Paste</a></li>
-                    <li><a href="#Delete">Delete</a></li>    
+                    <li><a href="#Delete">Delete</a></li> 
+                    <li><a href="#Select-rows">Select rows</a></li>
+                    <li><a href="#Select-columns">Select columns</a></li>
+                    <li><a href="#Show-last-5-recent-files-(after_saving)">Show last 5 recent files (after saving)</a></li>
+                    <li><a href="#Open-recent-files">Open recent files</a></li>
+                    <li><a href="#Open-&-save-csv-files">Open & save csv files</a></li>
+                    <li><a href="#About-Qt">About Qt</a></li>
+                    <li><a href="#About-spreadsheet">About spreadsheet</a></li>
+                    <li><a href="#Save-As">Save As</a></li>
+                    <li><a href="#New-file">New file</a></li> 
                   </ul>
             </ul>
               <li><a href="#Text-Editor">Text Editor</a></li>
@@ -52,7 +61,15 @@
                  </ul>  
     </ol>
 
-
+#Select-rows
+#Select-columns
+#Show-last-5-recent-files-(after_saving)
+#Open-recent-files
+#Open-&-save-csv-files
+#About-Qt
+#About-spreadsheet
+#Save-As
+#New-file
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -485,7 +502,7 @@ void SpreadSheet::deleteslot()
     cell->setText("");
 }
  ```
- ### Select rows
+ ### Select-rows
 ```cpp
 void SpreadSheet::selectrowslot()
 {
@@ -499,7 +516,7 @@ void SpreadSheet::selectrowslot()
     }
 }
  ```
-  ### Select columns
+  ### Select-columns
 ```cpp
 void SpreadSheet::selectrcolslot()
 {
@@ -513,7 +530,7 @@ void SpreadSheet::selectrcolslot()
     }
 }
  ```
-  ### Show last 5 recent files (after saving)
+  ### Show-last-5-recent-files-(after_saving)
   ```cpp
 void SpreadSheet::saveContent(QString filename)
 {
@@ -577,7 +594,7 @@ void SpreadSheet::saveContent(QString filename)
 
 }
  ```
-   ### Open recent files
+   ### Open-recent-files
  ```cpp
  void SpreadSheet::openrecentfilesslot()
 {
@@ -591,7 +608,7 @@ void SpreadSheet::saveContent(QString filename)
     }
 }
  ```
-   ### Open/save csv files
+   ### Open-&-save-csv-files
  ```cpp
 void SpreadSheet::loadContent(QString filename)
 {
@@ -643,7 +660,7 @@ void SpreadSheet::saveContent(QString filename)
  }
 
  ```
- ### About Qt
+ ### About-Qt
 
 ```cpp
 void SpreadSheet::aboutqtslot()
@@ -651,7 +668,7 @@ void SpreadSheet::aboutqtslot()
     QMessageBox::aboutQt(this,"about_QT");
 }
  ```
-  ### About spreadsheet
+  ### About-spreadsheet
 
 ```cpp
 void SpreadSheet::aboutslot()
@@ -659,7 +676,7 @@ void SpreadSheet::aboutslot()
     QMessageBox::about(this,"About spreadsheet",abouttext);
 }
  ```
-   ### Save As
+   ### Save-As
 
 ```cpp
 void SpreadSheet::saveasslot()
@@ -674,7 +691,7 @@ void SpreadSheet::saveasslot()
     }
 }
  ```
-   ### New file
+   ### New-file
 
 ```cpp
 void SpreadSheet::newfileslot()
