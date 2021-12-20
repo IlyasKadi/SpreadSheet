@@ -426,7 +426,7 @@ Here is an overview of the menus:
 
 | File                                    | Edit                                | Help                                  |
 | :---                                    |             :----:                  |                                  ---: |
-| ![Image haikyuu](images/haikyuu.png)    |![Image haikyuu](images/haikyuu.png) |![Image haikyuu](images/haikyuu.png)   |
+| ![Image haikyuu](images/File_.png)    |![Image haikyuu](images/Edit_.png) |![Image haikyuu](images/Help_.png)   |
 
 > Set of menus for our application. 
 
