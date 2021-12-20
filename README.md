@@ -182,7 +182,7 @@ here are the steps to acomplish that:
    2. Using the designer obtain the following the form:
 
 <p align="center">
-  <img src="images/image_class_diagram.png">
+  <img src="images/go-cell0.png">
 </p>
 
  >Ui components of the Go Dialog. 
