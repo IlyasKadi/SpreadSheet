@@ -79,7 +79,7 @@ In the lecture on **QMainWindow**, we wrote the code for the graphical and set o
 You should have an application that looks like that :
    
    <p align="center">
-     <img src="images/hsl_hue.png">
+     <img src="images/interface_sp.png">
    </p>  
   
 <p align="right">(<a href="#top">back to top</a>)</p>
