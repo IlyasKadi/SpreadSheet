@@ -411,20 +411,15 @@ void SpreadSheet::loadContent(QString filename)
     if(file.open(QIODevice::ReadOnly))
     {
         QTextStream in(&file);
-        int row=0;
         while(!in.atEnd())
         {
-            int col=0;
             QString line;
             line=in.readLine();
-             auto tokens=line.split(QChar(','));
-             for(QString s:tokens)
-             {
-                 auto cell = new QTableWidgetItem(s);
-                 spreadsheet->setItem(row,col,cell);
-                 col++;
-             }
-             row++;
+            auto tokens=line.split(QChar(','));
+            int row = tokens[0].toInt();
+            int col = tokens[1].toInt();
+            auto cell = new QTableWidgetItem(tokens[2]);
+           spreadsheet->setItem(row,col,cell);
         }
     }
 }
