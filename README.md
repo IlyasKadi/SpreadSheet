@@ -444,6 +444,15 @@ void SpreadSheet::pasteslot()
  ```
 
 ### Delete
+```cpp
+void SpreadSheet::deleteslot()
+{
+    int selcol = spreadsheet->currentColumn();
+    int selrow = spreadsheet->currentRow();
+    auto cell = spreadsheet->item(selrow,selcol);
+    cell->setText("");
+}
+ ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
