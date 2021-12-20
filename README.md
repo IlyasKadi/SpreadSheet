@@ -244,7 +244,7 @@ No we are setup to create the interesting connexion between the goCell action:
 ```
 | File       | Edit     | 
 |  --------  | ----     | 
-| ![Image haikyuu](images/go-cell.png)  |![Image haikyuu](images/go-cell1.png) |
+| ![Image ](images/go-cell.png)  |![Image ](images/go-cell1.png) |
 
 > Go to Cell dialog and response. 
 
@@ -258,7 +258,7 @@ We will move now for the **Find** dialog. This dialog prompts the user for a inp
   1. Create a Form Class with the following ui:
   
 <p align="center">
-  <img src="images/image_class_diagram.png">
+  <img src="images/find.png">
 </p>
 
 > Find Dialog ui form.  
@@ -278,13 +278,9 @@ Here is a set of useful information about the `QTableWidget` class:
    spreadsheet->setCurrentCell(int i, int j);
 ```
 
-<p align="center">
-  <img src="images/image_class_diagram.png">
-</p>
-
-<p align="center">
-  <img src="images/image_class_diagram.png">
-</p>
+| File       | Edit     | 
+|  --------  | ----     | 
+| ![Image ](images/khadouj.png)  |![Image ](images/khadouj1.png) |
 
 > Find Dialog ui form.
 
