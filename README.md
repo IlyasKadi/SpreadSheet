@@ -727,11 +727,11 @@ Here is an overview of the menus:
 
 ### Actions
 
-# File-Actions
+#### File-Actions
 
-# Edit-Actions
+#### Edit-Actions
 
-# Help-Actions
+#### Help-Actions
 
 
 
