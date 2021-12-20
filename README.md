@@ -670,7 +670,7 @@ void SpreadSheet::aboutqtslot()
  ```
  
  <p align="center">
-  <img src="images/About_qt.png">
+  <img src="images/aboutqt_sp.png">
 </p>
 
   ### About-spreadsheet
