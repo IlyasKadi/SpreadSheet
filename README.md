@@ -31,7 +31,8 @@
                   </ul>
               <li><a href="#other-actions">Other Actions</a></li>
                   <ul> 
-                    <li><a href="#Copy">Copy</a></li> <li><a href="#Cut">Cut</a></li>
+                    <li><a href="#Copy" href="#Cut">Copy</a></li> 
+                    <li><a href="#Cut">Cut</a></li>
                     <li><a href="#Paste">Paste</a></li>
                     <li><a href="#Delete">Delete</a></li> 
                     <li><a href="#Select-rows">Select rows</a></li>
