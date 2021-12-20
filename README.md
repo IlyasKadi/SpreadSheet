@@ -669,8 +669,9 @@ void SpreadSheet::aboutqtslot()
 }
  ```
  <p align="center">
-  <img src="sp_aboutqt.png.png">
+  <img src="sp_aboutqt.png">
 </p>
+
   ### About-spreadsheet
 
 ```cpp
@@ -680,8 +681,9 @@ void SpreadSheet::aboutslot()
 }
  ```
  <p align="center">
-  <img src="images/about_sp.png.png">
+  <img src="images/about_sp.png">
 </p>
+
    ### Save-As
 
 ```cpp
@@ -707,7 +709,7 @@ void SpreadSheet::newfileslot()
 }
  ```
  <p align="center">
-  <img src="images/newfile.png.png">
+  <img src="images/newfile.png">
 </p>
  
  
