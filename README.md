@@ -124,7 +124,7 @@ Which simply change the **cellLocation** text with the current cell coordinates.
     //connectting the chane of any element in the spreadsheet with the update status bar
     connect(spreadsheet, &QTableWidget::cellClicked, this,  &SpreadSheet::updateStatusBar);
 
-    //connnetthe  gocell action
+    //connnet the gocell action
     connect(goCell, &QAction::triggered, this, &SpreadSheet::goCellSlot);
 
     //connnet the find action
