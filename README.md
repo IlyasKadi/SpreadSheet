@@ -391,7 +391,44 @@ void SpreadSheet::saveSlot()
 
 
 ### Load-File
+```cpp
+void SpreadSheet::loadContent(QString filename)
+{
 
+    for(int i=0;i<spreadsheet->rowCount();i++)
+    {
+        for(int j=0;j<spreadsheet->columnCount();j++)
+        {
+            auto cell = spreadsheet->item(i,j);
+            if(cell)
+            {
+                cell->setText("");
+            }
+        }
+    }
+    QFile file(filename);
+
+    if(file.open(QIODevice::ReadOnly))
+    {
+        QTextStream in(&file);
+        int row=0;
+        while(!in.atEnd())
+        {
+            int col=0;
+            QString line;
+            line=in.readLine();
+             auto tokens=line.split(QChar(','));
+             for(QString s:tokens)
+             {
+                 auto cell = new QTableWidgetItem(s);
+                 spreadsheet->setItem(row,col,cell);
+                 col++;
+             }
+             row++;
+        }
+    }
+}
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
