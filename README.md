@@ -775,12 +775,140 @@ Here is an overview of the menus:
 ### Actions
 
 #### File-Actions
+##### new
+```cpp
+
+void TextEditor::on_actionNew_triggered()
+{
+    auto newfile = new TextEditor;
+    newfile->show();
+
+}
+ ```
+##### open
+```cpp
+void TextEditor::loadContent(QString filename)
+{
+    QFile file(filename);
+
+    if(file.open(QIODevice::ReadOnly))
+    {
+           QTextStream in(&file);
+           QString text;
+
+           while(!in.atEnd())
+           {
+               QString line;
+               line=in.readLine();
+               text+=line;
+               text+="\n";
+           }
+
+           ui->plainTextEdit->setPlainText(text);
+    }
+}
+void TextEditor::on_actionOpen_triggered()
+{
+    QFileDialog d;
+    auto filen = d.getOpenFileName();
+    currentFile=new QString(filen);
+    setWindowTitle(*currentFile);
+    loadContent(filen);
+
+}
+ ```
+ ##### save
+```cpp
+void TextEditor::saveContent(QString filename)
+{
+    QFile file(filename);
+
+    if(file.open(QIODevice::WriteOnly))
+    {
+        QTextStream out(&file);
+
+                    out  << ui->plainTextEdit->toPlainText();
+        }
+
+    file.close();
+}
+void TextEditor::on_actionSave_triggered()
+{
+    if(!currentFile)
+    {
+        QFileDialog D;
+        auto filename =D.getSaveFileName();
+        currentFile=new QString(filename);
+        setWindowTitle(*currentFile);
+    }
+     saveContent(*currentFile);
+
+}
+ ```
+  ##### saveAs
+```cpp
+
+void TextEditor::on_actionSave_As_triggered()
+{
+
+    if(currentFile)
+    {
+        QFileDialog D;
+        auto filename =D.getSaveFileName();
+        currentFile=new QString(filename);
+        setWindowTitle(*currentFile);
+        saveContent(*currentFile);
+    }
+
+}
+ ```
+   ##### Exit
+```cpp
+
+void SpreadSheet::cutslot()
+{
+     auto cell = spreadsheet->item(spreadsheet->currentRow(),spreadsheet->currentColumn());
+     QString cellc =cell->text();
+     clipboard->setText(cellc);
+     cell->setText("");
+
+}
+ ```
 
 #### Edit-Actions
+> For the copy,cut and paste actions are created with the designer form
+
+```cpp
+void TextEditor::textSelected(bool isselected)
+{
+    if (isselected){
+        ui->actionCut->setEnabled(true);
+        ui->actionCopy->setEnabled(true);
+   }
+}
+ ```
+| before selecting text                   | After selecting a text              | After selecting a text                              |
+| :---                                    |             :----:                  |                                  ---: |
+| ![Image haikyuu](images/Edit_.png)    |![Image haikyuu](images/selectedtext2_.png)     |![Image haikyuu](images/selectedtext_.png)     |
 
 #### Help-Actions
+   ##### About_T-E
+```cpp
+void TextEditor::on_action_About_triggered()
+{
+    QMessageBox::about(this,"About TextEditor",text);
 
+}
+ ```
+   ##### AboutQt
+```cpp
 
+void TextEditor::on_actionAbout_Qt_triggered()
+{
+    QMessageBox::aboutQt(this,"about_QT");
+
+}
+ ```
 
 
 
