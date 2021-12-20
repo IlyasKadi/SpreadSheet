@@ -669,6 +669,15 @@ void SpreadSheet::saveasslot()
     }
 }
  ```
+   ### New file
+
+```cpp
+void SpreadSheet::newfileslot()
+{
+    auto newfile = new SpreadSheet;
+    newfile->show();
+}
+ ```
  
  
  
