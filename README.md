@@ -397,7 +397,6 @@ void SpreadSheet::saveSlot()
 
 ## Other-Actions's slots
 ### Copy
-
 ```cpp
 
 void SpreadSheet::copyslot()
@@ -449,7 +448,7 @@ void SpreadSheet::deleteslot()
     cell->setText("");
 }
  ```
- ### select rows
+ ### Select rows
 ```cpp
 void SpreadSheet::selectrowslot()
 {
@@ -463,7 +462,7 @@ void SpreadSheet::selectrowslot()
     }
 }
  ```
-  ### select columns
+  ### Select columns
 ```cpp
 void SpreadSheet::selectrcolslot()
 {
@@ -477,7 +476,7 @@ void SpreadSheet::selectrcolslot()
     }
 }
  ```
-  ### show last 5 recent files (after saving)
+  ### Show last 5 recent files (after saving)
   ```cpp
 void SpreadSheet::saveContent(QString filename)
 {
@@ -541,7 +540,7 @@ void SpreadSheet::saveContent(QString filename)
 
 }
  ```
-   ### open recent files
+   ### Open recent files
  ```cpp
  void SpreadSheet::openrecentfilesslot()
 {
@@ -555,7 +554,7 @@ void SpreadSheet::saveContent(QString filename)
     }
 }
  ```
-   ### open/save csv files
+   ### Open/save csv files
  ```cpp
 void SpreadSheet::loadContent(QString filename)
 {
@@ -607,6 +606,39 @@ void SpreadSheet::saveContent(QString filename)
  }
 
  ```
+ ### About Qt
+
+```cpp
+void SpreadSheet::aboutqtslot()
+{
+    QMessageBox::aboutQt(this,"about_QT");
+}
+ ```
+  ### About spreadsheet
+
+```cpp
+void SpreadSheet::aboutslot()
+{
+    QMessageBox::about(this,"About spreadsheet",abouttext);
+}
+ ```
+   ### Save As
+
+```cpp
+void SpreadSheet::saveasslot()
+{
+    if(currentFile)
+    {
+        QFileDialog D;
+        auto filename =D.getSaveFileName();
+        currentFile=new QString(filename);
+        setWindowTitle(*currentFile);
+        saveContent(*currentFile);
+    }
+}
+ ```
+ 
+ 
  
 <p align="right">(<a href="#top">back to top</a>)</p>
 
