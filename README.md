@@ -606,7 +606,9 @@ void SpreadSheet::saveContent(QString filename)
  
  | File       | Edit     | 
 |  --------  | ----     | 
-| ![Image ](images/recentfiles_swap.png)  |![Image ](images/recentfiles_swap2.png) |
+| ![Image ](images/recentfiles_swap2.png)  |![Image ](images/recentfiles_swap.png) |
+
+> last file always shows in the top of the 5 recent files (no redundancy, and only max of 5 files)
 
 
    ### Open-recent-files
