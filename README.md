@@ -889,7 +889,7 @@ void TextEditor::textSelected(bool isselected)
  ```
 | before selecting text                   | After selecting a text              | After selecting a text                              |
 | :---                                    |             :----:                  |                                  ---: |
-| ![Image haikyuu](images/Edit_.png)    |![Image haikyuu](images/selectedtext2_.png)     |![Image haikyuu](images/selectedtext_.png)     |
+| ![Image haikyuu](images/Edit_.png)    |![Image haikyuu](images/selectedttext2_.png)     |![Image haikyuu](images/selectedtext_.png)     |
 
 #### Help-Actions
    ##### About_T-E
